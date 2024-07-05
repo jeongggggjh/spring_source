@@ -1,6 +1,7 @@
 package anno1_auto;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 // 참고 : 계층(Layers)별 어노테이션 구분
@@ -15,8 +16,12 @@ import org.springframework.stereotype.Service;
 // @Scope("singleton")
 public class SenderProcess {
 	// @Autowired : Bean의 자동 삽입을 위해 사용하는 어노테이션(name에 의한 매핑 X, type 매핑 O)
-	@Autowired // field injection : 간단하나 테스트 불편. 주로 사용
-	private Sender sender; 
+	
+	// @Autowired // field injection : 간단하나 테스트 불편. 주로 사용
+	// private Sender sender; 
+	@Autowired
+	@Qualifier("sender")
+	private SenderInter senderInter;
 	
 	/*
 	@Autowired // setter injection : 코드가 장황해짐
@@ -30,11 +35,7 @@ public class SenderProcess {
 	}
 	*/
 	
-	public Sender getSender() {
-		return sender;
-	}
-	
 	public void dispData() {
-		sender.show();
+		senderInter.show();
 	}
 }
