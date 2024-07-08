@@ -6,6 +6,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
 	<!-- 핵심 객체 생성 : target -->
 	<bean id="logicImpl" class="pack.LogicImpl">
 		<constructor-arg>
@@ -25,5 +26,4 @@
 			<aop:around method="kbs" pointcut-ref="poi"/>
 		</aop:aspect>
 	</aop:config>
-	
 </beans>
