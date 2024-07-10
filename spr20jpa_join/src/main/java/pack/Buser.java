@@ -1,4 +1,4 @@
-package pack.model;
+package pack;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,16 +16,13 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity 
-@Table(name="mem") // DB의 특정 테이블과 매핑
-public class MemDto { // 카멜케이스로 작성하면 자동으로 언더스코어 네이밍 컨벤션을 따름
+@Entity
+@Table(name="buser")
+public class Buser {
 	@Id
-	@Column(name="num")
-	private int num;
+	@Column(name="buser_no")
+	private int buserNo;
 	
-	@Column(name="name", nullable = true)
-	private String name;
-	
-	private String addr;
-
+	@Column(name="buser_name")
+	private String buserName;
 }
