@@ -68,4 +68,9 @@ public class TestController {
 		return "show4";
 	}
 	
+	@GetMapping("/ex5")
+	public String abc5() {
+		return "show5";
+	}
+	
 }

@@ -25,8 +25,8 @@ if, switch, each 연습
 		<th>인덱스</th><th>인덱스</th><th>인덱스</th>
 	</tr>
 	<tr th:each="dto,status:${dtos}">
-		<td th:text="${status.index}"</td>
-		<td th:text="${status.count}"</td>
+		<td th:text="${status.index}"></td>
+		<td th:text="${status.count}"></td>
 		<td th:if="${status.odd}" th:text="홀수"></td>
 		<td th:if="${status.even}" th:text="짝수"></td>
 	</tr>
