@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>templates/detail.html</title>
+</head>
+<body>
+<h3>* 회원 상세보기 *</h3>
+<form th:action="@{/update}" method="post" th:object="${member}">
+아이디 : [[*{id}]]
+	<input type="hidden" name="id" th:field="*{id}" /><br>
+비밀번호 : <input type="text" name="passwd" th:field="*{passwd}" /><br>
+회원명 : <input type="text" name="name" th:field="*{name}" /><br>
+<br>
+<input type="submit" value="수 정">
+<input type="button" value="이 전" onclick="history.back()">
+</form>
+</body>
+</html>
