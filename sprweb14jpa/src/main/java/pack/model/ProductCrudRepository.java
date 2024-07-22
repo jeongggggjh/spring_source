@@ -25,4 +25,8 @@ public interface ProductCrudRepository extends JpaRepository<ProductVo, Integer>
 	
 	@Query(value = "select p from ProductVo as p where p.code=?1 or p.sang=?2")
 	List<ProductVo> findByData(int code, String sang);
+	
+	// native Query문 사용
+	@Query(value = "select code, sang, su, dan from product where code <= 5", nativeQuery = true)
+	List<ProductVo> findAllData2();
 }

@@ -101,5 +101,14 @@ public class Sprweb14jpaApplication {
 				vo6.getSu() + " " +
 				vo6.getDan());
 		}
+		
+		System.out.println();
+		List<ProductVo> list5 = repository.findAllData2();
+		for(ProductVo vo7 : list5) {
+			System.out.println(vo7.getCode() + " " + 
+					vo7.getSang() + " " +
+					vo7.getSu() + " " +
+					vo7.getDan());
+			}
 	}
 }
