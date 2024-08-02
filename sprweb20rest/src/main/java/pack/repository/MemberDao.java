@@ -19,4 +19,19 @@ public class MemberDao {
 		return session.selectList("member.getList");
 	}
 	
-}
+	public void insert(MemberDto dto) {
+		session.insert("member.insert", dto);
+	}
+	
+	public MemberDto getData(int num) {
+		return session.selectOne("member.getData", num);
+	}
+	
+	public void update(MemberDto dto) {
+		session.update("member.update", dto);
+	}
+	
+	public void delete(int num) {
+		session.delete("member.delete", num);
+	}
+} 
