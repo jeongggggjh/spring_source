@@ -5,9 +5,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>로그인 성공</h1>
-<form th:action="@{/logout}" method="post">
-	<button type="submit">로그아웃</button>
-</form>
+<strong sec:authentication="name"></strong> 로그인 성공<br>
+<a th:href="@{/}">인덱스로 이동</a>
 </body>
 </html>
