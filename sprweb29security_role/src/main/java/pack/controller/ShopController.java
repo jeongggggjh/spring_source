@@ -16,7 +16,7 @@ public class ShopController {
 	public String buy(@RequestParam("goodscode")int goodscode, @RequestParam("amount")int amount, Model model) {
 		String msg = goodscode + "번 상품 " + amount + "개 주문 완료";
 		model.addAttribute("msg", msg);
-		return "shop";
+		return "buy";
 	}
 	
 }
